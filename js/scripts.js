@@ -321,6 +321,7 @@ function submitForm(event) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
+	mode: 'no-cors'  // Отключаем проверку CORS
     })
     .then(response => {
         if (response.ok) {
